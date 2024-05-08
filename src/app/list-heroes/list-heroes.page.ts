@@ -21,7 +21,7 @@ export class ListHeroesPage {
     { id: 5, name: 'Guardians of the Galaxy', imageUrl: 'https://example.com/guardians.jpg' },
   ];
 
-  navigateToHeroeDetail() {
-    this.router.navigate(['/heroe-detail']); // Navigate to HeroeDetailPage
+  navigateToHeroeDetail(id: number) {
+    this.router.navigate(['/heroe-detail', id]); // Navigate to HeroeDetailPage
   }
 }

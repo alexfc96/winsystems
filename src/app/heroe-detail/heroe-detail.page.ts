@@ -13,13 +13,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroeDetailPage implements OnInit {
   private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-  heroId: number| null = null;
+  heroeId: number| null = null;
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe((paramMap) => {
       const id = paramMap.get('id'); // Access 'id' parameter
       if (id) {
-        this.heroId = Number(id); // Convert string to number
+        this.heroeId = Number(id); // Convert string to number
       }
     });
   }
