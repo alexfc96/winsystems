@@ -1,3 +1,7 @@
+Stack:
+    -Nodejs version: >=18
+    -Ionic version: 8
+
 Ejercicio practico
 
 Realizar una app:

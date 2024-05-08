@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Listado de superheroes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let movie of marvelMovies" [routerLink]="['/heroe-detail', movie.id]">
+      <ion-thumbnail slot="start">
+        <img [src]="movie.imageUrl" alt="{{ movie.name }}">
+      </ion-thumbnail>
+      <ion-label slot="end">
+        {{ movie.name }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
