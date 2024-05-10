@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { IonToolbar, IonTitle, IonContent, IonList, IonLabel, IonItem, IonHeader, IonThumbnail } from '@ionic/angular/standalone';
 import { ApiMarvelService } from '../api/api-marvel.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +15,6 @@ import { HeroeResult } from 'src/types';
   imports: [CommonModule, IonHeader, IonItem, IonLabel, IonToolbar, IonTitle, IonContent, IonList, IonThumbnail, RouterLink, HttpClientModule],
 })
 export class ListHeroesPage implements OnInit{
-  private router: Router = inject(Router);
   private apiMarvelService = inject(ApiMarvelService)
 
   marvelHeroes$: Observable<HeroeResult[]> = new Observable<HeroeResult[]>();
@@ -26,14 +25,5 @@ export class ListHeroesPage implements OnInit{
 
   getMarvelHeroes() {
     this.marvelHeroes$ = this.apiMarvelService.getAllSuperheroes();
-    this.marvelHeroes$.subscribe((data) => {
-      console.log(data);
-    }, (error) => {
-      console.error('Error obteniendo superhéroes:', error);
-    });
-  }
-
-  navigateToHeroeDetail(id: number) {
-    this.router.navigate(['/heroe-detail', id]); // Navigate to HeroeDetailPage
   }
 }

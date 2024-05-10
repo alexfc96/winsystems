@@ -2,7 +2,8 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonItem, IonList } from '@ionic/angular/standalone';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { HeroeResult } from 'src/types';
 
 @Component({
   standalone: true,
@@ -12,16 +13,14 @@ import { ActivatedRoute } from '@angular/router';
   imports: [IonList, IonItem, IonLabel, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class HeroeDetailPage implements OnInit {
-  private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-  heroeId: number| null = null;
+  private router: Router = inject(Router);
+  selectedHeroe: HeroeResult | null | undefined = null;
 
   ngOnInit() {
-    this.activatedRoute.paramMap.subscribe((paramMap) => {
-      const id = paramMap.get('id'); // Access 'id' parameter
-      if (id) {
-        this.heroeId = Number(id); // Convert string to number
-      }
-    });
+    const state = this.router.getCurrentNavigation()?.extras.state;
+    if (state) {
+      this.selectedHeroe = state['heroe'] as HeroeResult;
+    }
   }
 
 }

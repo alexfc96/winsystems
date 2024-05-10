@@ -1,27 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Super heroe {{heroeId}}</ion-title>
+    <ion-title>Super heroe {{selectedHeroe?.id}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="hero-detail-container">
     <div class="hero-image-container">
-      <!-- <img [src]="heroImageUrl" alt="{{ heroName }}"> -->
-      imagen
+      <img [src]="selectedHeroe?.thumbnail?.path + '/standard_fantastic.' + selectedHeroe?.thumbnail?.extension" alt="{{ selectedHeroe?.name }}">
     </div>
     <hr class="separator"> 
     
     <div class="hero-info-container">
       <ion-list [inset]="true">
         <ion-item>
-          <ion-label>Cantidad de comics disponibles: 5</ion-label>
+          <ion-label>Cantidad de comics disponibles: {{selectedHeroe?.comics?.available}}</ion-label>
         </ion-item>
         <ion-item>
-          <ion-label>Cantidad de series disponibles: 5</ion-label>
+          <ion-label>Cantidad de series disponibles: {{selectedHeroe?.series?.available}}</ion-label>
         </ion-item>
         <ion-item>
-          <ion-label>Cantidad de stories disponibles: 5</ion-label>
+          <ion-label>Cantidad de stories disponibles: {{selectedHeroe?.stories?.available}}</ion-label>
         </ion-item>
       </ion-list>
     </div>
