@@ -8,12 +8,12 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let movie of marvelMovies" [routerLink]="['/heroe-detail', movie.id]">
+    <ion-item *ngFor="let hero of marvelHeroes$ | async" [routerLink]="['/heroe-detail', hero.id]">
       <ion-thumbnail slot="start">
-        <img [src]="movie.imageUrl" alt="{{ movie.name }}">
+        <img [src]="hero.thumbnail.path + '/standard_fantastic.' + hero.thumbnail.extension" alt="{{ hero.name }}">
       </ion-thumbnail>
       <ion-label slot="end">
-        {{ movie.name }}
+        {{ hero.name }}
       </ion-label>
     </ion-item>
   </ion-list>

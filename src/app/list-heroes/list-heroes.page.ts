@@ -5,7 +5,7 @@ import { IonToolbar, IonTitle, IonContent, IonList, IonLabel, IonItem, IonHeader
 import { ApiMarvelService } from '../api/api-marvel.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { HeroeResult } from 'src/types';
 @Component({
   standalone: true,
   selector: 'app-list-heroes',
@@ -18,14 +18,7 @@ export class ListHeroesPage implements OnInit{
   private router: Router = inject(Router);
   private apiMarvelService = inject(ApiMarvelService)
 
-  marvelHeroes$: Observable<any> = new Observable<any>();
-  marvelMovies = [
-    { id: 1, name: 'Iron Man', imageUrl: 'https://example.com/iron-man.jpg' },
-    { id: 2, name: 'Captain America', imageUrl: 'https://example.com/captain-america.jpg' },
-    { id: 3, name: 'Thor', imageUrl: 'https://example.com/thor.jpg' },
-    { id: 4, name: 'Black Widow', imageUrl: 'https://example.com/black-widow.jpg' },
-    { id: 5, name: 'Guardians of the Galaxy', imageUrl: 'https://example.com/guardians.jpg' },
-  ];
+  marvelHeroes$: Observable<HeroeResult[]> = new Observable<HeroeResult[]>();
 
   ngOnInit(): void {
     this.getMarvelHeroes();

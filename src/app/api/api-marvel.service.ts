@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Md5 } from 'ts-md5';
 import { catchError, map, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { HeroeResponse } from 'src/types';
 
 @Injectable({
   providedIn: 'root'
@@ -26,17 +27,17 @@ export class ApiMarvelService {
     // Possible improve: accept as argument the limit number of heroes per request
     const limit = 20;
     // TODO: type response
-    return this.http.get(`${this.baseUrl}/characters?limit=${limit}&ts=${this.timestamp}&apikey=${this.publicApiKey}&hash=${this.hash}`)
+    return this.http.get<HeroeResponse>(`${this.baseUrl}/characters?limit=${limit}&ts=${this.timestamp}&apikey=${this.publicApiKey}&hash=${this.hash}`)
       .pipe(
-        map((response: any) => response.data.results), // Extract data from response
+        map((response) => response.data.results), // Extract data from response
         catchError((error) => this.handleError(error)) // Handle errors
       );
   }
 
   private handleError(error: any) {
     console.error('An error occurred:', error.message || error);
-    // Return an observable with a user-friendly error message
-    return of('Something went wrong. Please try again later.');
+    // Return an empty array for avoid TS errors
+    return of([]);
   }
 }
 
