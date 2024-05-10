@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonItem, IonNote } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonItem, IonNote, IonButtons, IonBackButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { HeroeResult } from 'src/types';
 
@@ -10,7 +10,7 @@ import { HeroeResult } from 'src/types';
   selector: 'app-heroe-detail',
   templateUrl: './heroe-detail.page.html',
   styleUrls: ['./heroe-detail.page.scss'],
-  imports: [IonNote, IonItem, IonLabel, IonContent, IonHeader, IonTitle, IonToolbar, IonNote, CommonModule, FormsModule]
+  imports: [IonBackButton, IonNote, IonItem, IonLabel, IonContent, IonHeader, IonTitle, IonToolbar, IonNote, IonButtons, CommonModule, FormsModule]
 })
 export class HeroeDetailPage implements OnInit {
   private router: Router = inject(Router);
