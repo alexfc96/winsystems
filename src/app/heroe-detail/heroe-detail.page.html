@@ -11,18 +11,20 @@
     </div>
     <hr class="separator"> 
     
+    <span class="more-info-separator">Otra información</span>
     <div class="hero-info-container">
-      <ion-list [inset]="true">
-        <ion-item>
-          <ion-label>Cantidad de comics disponibles: {{selectedHeroe?.comics?.available}}</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Cantidad de series disponibles: {{selectedHeroe?.series?.available}}</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Cantidad de stories disponibles: {{selectedHeroe?.stories?.available}}</ion-label>
-        </ion-item>
-      </ion-list>
+      <ion-item>
+        <ion-label>Cantidad de comics disponibles: </ion-label>
+        <ion-note slot="end">{{selectedHeroe?.comics?.available}}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cantidad de series disponibles: </ion-label>
+        <ion-note slot="end">{{selectedHeroe?.series?.available}}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cantidad de stories disponibles: </ion-label>
+        <ion-note slot="end">{{selectedHeroe?.stories?.available}}</ion-note>
+      </ion-item>
     </div>
   </div>
 </ion-content>
