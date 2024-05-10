@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let heroe of marvelHeroes$ | async" routerLink="/heroe-detail" [state]="{heroe}">
+    <ion-item class="heroe-image-container" *ngFor="let heroe of marvelHeroes$ | async" routerLink="/heroe-detail" [state]="{heroe}">
       <ion-thumbnail slot="start">
         <img [src]="heroe.thumbnail.path + '/standard_fantastic.' + heroe.thumbnail.extension" alt="{{ heroe.name }}">
       </ion-thumbnail>

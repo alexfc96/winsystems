@@ -26,6 +26,17 @@
   text-decoration: none;
 }
 
+.heroe-image-container {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.heroe-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 ion-title {
   text-align: center;
 }
