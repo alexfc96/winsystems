@@ -2,6 +2,11 @@ Stack:
     -Nodejs version: >=18
     -Ionic version: 8
 
+Proccess to run the application:
+    -Clone the repository
+    -Run npm run install
+    -Execute npm run start
+
 Ejercicio practico
 
 Realizar una app:
