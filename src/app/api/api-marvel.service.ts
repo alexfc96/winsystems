@@ -26,7 +26,6 @@ export class ApiMarvelService {
   getAllSuperheroes() {
     // Possible improve: accept as argument the limit number of heroes per request
     const limit = 20;
-    // TODO: type response
     return this.http.get<HeroeResponse>(`${this.baseUrl}/characters?limit=${limit}&ts=${this.timestamp}&apikey=${this.publicApiKey}&hash=${this.hash}`)
       .pipe(
         map((response) => response.data.results), // Extract data from response
