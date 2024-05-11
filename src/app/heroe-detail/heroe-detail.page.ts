@@ -24,4 +24,7 @@ export class HeroeDetailPage implements OnInit {
     }
   }
 
+  goBack() {
+    this.router.navigateByUrl('/list-heroes');
+  }
 }
