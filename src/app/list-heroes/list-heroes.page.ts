@@ -6,19 +6,24 @@ import { ApiMarvelService } from '../api/api-marvel.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HeroeResult } from 'src/types';
+import { TranslateModule, TranslateService} from '@ngx-translate/core';
 @Component({
   standalone: true,
   selector: 'app-list-heroes',
   templateUrl: 'list-heroes.page.html',
   styleUrls: ['list-heroes.page.scss'],
   providers: [ApiMarvelService],
-  imports: [CommonModule, IonHeader, IonItem, IonLabel, IonToolbar, IonTitle, IonContent, IonList, IonThumbnail, RouterLink, HttpClientModule],
+  imports: [CommonModule, IonHeader, IonItem, IonLabel, IonToolbar, IonTitle, IonContent, IonList, IonThumbnail, RouterLink, HttpClientModule, TranslateModule],
 })
 export class ListHeroesPage implements OnInit{
+  private translateService: TranslateService = inject(TranslateService);
   private apiMarvelService = inject(ApiMarvelService)
 
   marvelHeroes$: Observable<HeroeResult[]> = new Observable<HeroeResult[]>();
 
+  // setLanguage(lang: string) {
+  //   this.translateService.use(lang);
+  // }
   ngOnInit(): void {
     this.getMarvelHeroes();
   }
