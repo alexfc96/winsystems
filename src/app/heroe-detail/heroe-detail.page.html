@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button text=""></ion-back-button>
     </ion-buttons>
-    <ion-title>Super héroe {{selectedHeroe?.id}}</ion-title>
+    <ion-title>{{'HERO_TITLE' | translate}} {{selectedHeroe?.id}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,18 +14,18 @@
     </div>
     <hr class="separator"> 
     
-    <span class="more-info-separator">Otra información</span>
+    <span class="more-info-separator">{{'HERO_MORE_DESCRIPTION_LABEL' | translate}}</span>
     <div class="hero-info-container">
       <ion-item>
-        <ion-label>Cantidad de comics disponibles: </ion-label>
+        <ion-label>{{'HERO_COMICS_LABEL' | translate}} </ion-label>
         <ion-note slot="end">{{selectedHeroe?.comics?.available}}</ion-note>
       </ion-item>
       <ion-item>
-        <ion-label>Cantidad de series disponibles: </ion-label>
+        <ion-label>{{'HERO_SERIES_LABEL' | translate}} </ion-label>
         <ion-note slot="end">{{selectedHeroe?.series?.available}}</ion-note>
       </ion-item>
       <ion-item>
-        <ion-label>Cantidad de stories disponibles: </ion-label>
+        <ion-label>{{'HERO_STORIES_LABEL' | translate}} </ion-label>
         <ion-note slot="end">{{selectedHeroe?.stories?.available}}</ion-note>
       </ion-item>
     </div>

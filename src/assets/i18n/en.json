@@ -1,7 +1,9 @@
 {
     "LIST_HEROES_TITLE": "List of Heroes",
+    "HERO_TITLE": "Superheroe",
     "HERO_NAME_LABEL": "Name",
-    "HERO_DESCRIPTION_LABEL": "Description",
-    "HERO_COMICS_LABEL": "Comics",
-    "HERO_SERIES_LABEL": "Series"
-}
+    "HERO_MORE_DESCRIPTION_LABEL": "Additional Information",
+    "HERO_COMICS_LABEL": "Number of Comics Available:",
+    "HERO_SERIES_LABEL": "Number of Series Available:",
+    "HERO_STORIES_LABEL": "Number of Stories Available:"
+  }

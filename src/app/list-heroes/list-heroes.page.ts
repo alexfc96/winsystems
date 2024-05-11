@@ -6,7 +6,7 @@ import { ApiMarvelService } from '../api/api-marvel.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HeroeResult } from 'src/types';
-import { TranslateModule, TranslateService} from '@ngx-translate/core';
+import { TranslateModule} from '@ngx-translate/core';
 @Component({
   standalone: true,
   selector: 'app-list-heroes',
