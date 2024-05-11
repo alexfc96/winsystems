@@ -16,14 +16,10 @@ import { TranslateModule, TranslateService} from '@ngx-translate/core';
   imports: [CommonModule, IonHeader, IonItem, IonLabel, IonToolbar, IonTitle, IonContent, IonList, IonThumbnail, RouterLink, HttpClientModule, TranslateModule],
 })
 export class ListHeroesPage implements OnInit{
-  private translateService: TranslateService = inject(TranslateService);
   private apiMarvelService = inject(ApiMarvelService)
 
   marvelHeroes$: Observable<HeroeResult[]> = new Observable<HeroeResult[]>();
 
-  // setLanguage(lang: string) {
-  //   this.translateService.use(lang);
-  // }
   ngOnInit(): void {
     this.getMarvelHeroes();
   }
