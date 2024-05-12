@@ -1,4 +1,4 @@
-# Superhero App
+# Superheroes Ionic APP
 ## Stack
 
 - Node.js version: >=18
