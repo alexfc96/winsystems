@@ -14,6 +14,18 @@
     - `MARVEL_PRIVATE_KEY`
 4. Execute `npm run start` to start the application.
 
+## Future Features and Improvements
+
+While the current version of the application meets the basic requirements outlined in the exercise request, there are several potential features and improvements that could be implemented in the future to enhance its functionality and user experience:
+
+- **Unit Testing and E2E**: I have tried to make the test E2E with Cypress but then the component tests failed because a conflict with the TS of Cypress. Otherwise, I have left the code testing the workflow with Cypress on the branch feature/testing-cypress.
+
+- **Error Handling and Feedback**: Enhance error handling to provide informative error messages and feedback to users in case of network errors or API failures.
+
+- **Performance Optimization**: Optimize the application's performance by implementing lazy loading for images, caching frequently accessed data, and minimizing network requests.
+
+- **Search Functionality**: Add a search feature to allow users to search for specific superheroes by name or other criteria.
+
 ----------------------------------------------------------------
 
 Explanatation of exercise requested:
