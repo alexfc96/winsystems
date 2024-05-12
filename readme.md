@@ -1,16 +1,22 @@
-Stack:
-    -Nodejs version: >=18
-    -Ionic version: 8
+# Superhero App
+## Stack
 
-Proccess to run the application:
-    -Clone the repository
-    -Run npm run install
-    -Configure enviromment files(src/environment.prod.ts and environment.ts) with the variables and their respective values for able to call the API correctly:
-        ·MARVEL_PUBLIC_KEY
-        ·MARVEL_PRIVATE_KEY
-    -Execute npm run start
+- Node.js version: >=18
+- Angular version: 17
+- Ionic version: 8
 
-Explanatation of exercise request:
+## How to Run the Application
+
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
+3. Configure environment files (`src/environment.ts`) with the variables and their respective values to call the API(https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0) correctly:
+    - `MARVEL_PUBLIC_KEY`
+    - `MARVEL_PRIVATE_KEY`
+4. Execute `npm run start` to start the application.
+
+----------------------------------------------------------------
+
+Explanatation of exercise requested:
     Realizar una app:
      En Ionic que utilice
     o Preferentemente versión 5 con Capacitor
